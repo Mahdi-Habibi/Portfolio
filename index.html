@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mahdi Habibi</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="./css/styles.css">
+        <!-- bootstrap css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- start -->
+        <!-- header -->
+        <div id="includeContent"></div>
+        <!-- main banner -->
+        <div class="main-banner">
+            <figure class="main-banner-img"><img src="./img/Banner.jpg" alt="banner"></figure>
+            <div class="layout"></div>
+            <div class="main-banner-content">
+                <h1 class="main-banner-content-heading">I design and build websites</h1>
+                <p>"Hey there! I'm a web developer and designer who loves creating awesome websites that not only look great but also make users smile. I'm all about using the latest tech to bring ideas to life in the coolest ways possible!"</p>
+                <div class="header-user-btns">
+                    <a href="#" class="user-link">Hire Me</a>
+                </div>
+            </div>
+        </div>
+        <!-- scripts -->
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document
+                        .getElementById('includeContent')
+                        .innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching include content', error));
+        </script>
+        <!-- jQuery js -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <!-- bootstrap js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+// start
+// fonts
+@font-face {
+    font-family: opensans;
+    src: url("../webfonts/opensans/OpenSans-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: opensans-bold;
+    src: url("../webfonts/opensans/OpenSans-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: opensans-light;
+    src: url("../webfonts/opensans/OpenSans-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: opensans-md;
+    src: url("../webfonts/opensans/OpenSans-Medium.ttf") format('truetype');
+}
+$opensans: opensans;
+$opensans-bold: opensans-bold;
+$opensans-light: opensans-light;
+$opensans-md: opensans-md;
+// colors
+$color1: #303841;
+$color2: #3A4750;
+$color3: #2185D5;
+$color4: #F3F3F3;
+// motion
+@mixin transitioned($element) {
+    transition: $element .5s ease;
+    -webkit-transition: $element .5s ease;
+    -moz-transition: $element .5s ease;
+    -ms-transition: $element .5s ease;
+    -o-transition: $element .5s ease;
+}
+// border
+@mixin bordered($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+// *
+* {
+    box-sizing: border-box;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+}
+// body
+body {
+    font-family: $opensans;
+    background-color: $color4;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+// header
+header {
+    width: 1091px;
+    height: auto;
+    background-color: transparent;
+    margin: 46px auto 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    color: $color1;
+    font-size: 24px;
+    span {
+        font-family: $opensans-bold;
+    }
+}
+.header-links-list {
+    display: flex;
+    align-items: center;
+    padding: 6px 32px 6px 6px;
+    border: 1.5px solid $color3;
+    @include bordered(290px);
+    li {
+        margin-right: 40px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:first-of-type {
+            a {
+                border: 1px solid $color2;
+                @include bordered(40px);
+                padding: 8px 16px;
+            }
+        }
+        a {
+            font-size: 16px;
+            color: $color2;
+            @include transitioned(color);
+            &:hover {
+                color: $color3;
+            }
+        }
+    }
+}
+.header-user-btns {
+    a {
+        color: $color2;
+        @include transitioned(color);
+        border: 1px solid $color3;
+        @include bordered(40px);
+        padding: 14px 20px;
+        text-align: center;
+        &:hover {
+            color: $color3;
+        }
+    }
+}
+// main banner
+.main-banner {
+    width: 100%;
+    height: 568px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-banner-img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    inset: 0;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.layout {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba($color: #000000, $alpha: .8);
+}
+.main-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 882px;
+    height: auto;
+    padding: 0 175px;
+    z-index: 111;
+    > :not(:last-child) {
+        margin-bottom: 11px;
+    }
+    > * {
+        display: inline-block;
+        width: auto;
+        max-width: fit-content;
+    }
+    p {
+        color: $color4;
+        line-height: 22.3px;
+        text-align: center;
+    }
+}
+.main-banner-content-heading {
+    font-size: 32px;
+    font-family: $opensans-bold;
+    color: $color4;
+    line-height: 56.2px;
+}
