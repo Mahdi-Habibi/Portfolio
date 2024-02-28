@@ -21,6 +21,11 @@
   padding: 0;
 }
 
+.container {
+  width: 1091px;
+  overflow: hidden;
+}
+
 body {
   font-family: opensans;
   background-color: #F3F3F3;
@@ -40,7 +45,7 @@ ul {
 }
 
 header {
-  width: 1091px;
+  width: 100%;
   height: auto;
   background-color: transparent;
   margin: 46px auto 52px;
@@ -173,4 +178,59 @@ header {
   font-family: opensans-bold;
   color: #F3F3F3;
   line-height: 56.2px;
+}
+
+.social-links {
+  width: 100%;
+  height: auto;
+  padding: 20px 190px;
+  border-top: 1px solid #3A4750;
+  border-bottom: 1px solid #3A4750;
+  margin-bottom: 91px;
+}
+
+.social-links-list {
+  display: flex;
+  align-items: center;
+}
+.social-links-list > li + i {
+  margin: 0 99px;
+}
+.social-links-list a {
+  color: #3A4750;
+  transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+}
+.social-links-list a:hover {
+  color: #2185D5;
+}
+
+.my-progress .section-header {
+  margin-bottom: 44px;
+}
+
+.section-header {
+  margin-left: 27px;
+  font-size: 40px;
+  line-height: 56.2px;
+}
+
+.my-progress-content {
+  width: 735px;
+}
+.my-progress-content li {
+  padding: 47px 0 47px 140px;
+}
+.my-progress-content li h3 {
+  font-size: 22px;
+  margin-bottom: 28px;
+  line-height: 33px;
+}
+.my-progress-content li p {
+  font-size: 19px;
+  line-height: 28px;
+  margin-bottom: 33px;
 }/*# sourceMappingURL=styles.css.map */

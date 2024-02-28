@@ -48,6 +48,11 @@ $color4: #F3F3F3;
     margin: 0;
     padding: 0;
 }
+// container
+.container {
+    width: 1091px;
+    overflow: hidden;
+}
 // body
 body {
     font-family: $opensans;
@@ -66,7 +71,7 @@ ul {
 }
 // header
 header {
-    width: 1091px;
+    width: 100%;
     height: auto;
     background-color: transparent;
     margin: 46px auto 52px;
@@ -175,4 +180,54 @@ header {
     font-family: $opensans-bold;
     color: $color4;
     line-height: 56.2px;
+}
+// social links
+.social-links {
+    width: 100%;
+    height: auto;
+    padding: 20px 190px;
+    border-top: 1px solid $color2;
+    border-bottom: 1px solid $color2;
+    margin-bottom: 91px;
+}
+.social-links-list {
+    display: flex;
+    align-items: center;
+    > li + i {
+        margin: 0 99px;
+    }
+    a {
+        color: $color2;
+        @include transitioned(color);
+        &:hover {
+            color: $color3;
+        }
+    }
+}
+// my progress
+.my-progress {
+    .section-header {
+        margin-bottom: 44px;
+    }
+}
+.section-header {
+    margin-left: 27px;
+    font-size: 40px;
+    line-height: 56.2px;
+}
+.my-progress-content {
+    width: 735px;
+    li {
+        padding: 47px 0 47px 140px;
+        h3 {
+            font-size: 22px;
+            margin-bottom: 28px;
+            line-height: 33px;
+        }
+        p {
+            font-size: 19px;
+            line-height: 28px;
+            margin-bottom: 33px;
+        }
+    }
 }
